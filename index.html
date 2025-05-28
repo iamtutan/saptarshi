@@ -95,13 +95,14 @@
   </li>
 
   <li>
-    Tap anywhere on the site to<br>
-     listen my favorite song
-    <div style="margin-left: 20ch;">
-      <span style="font-size:1.5rem;">&#8595;</span>
-      <a href="https://open.spotify.com/track/3kGsA9UQtSkSszY3epp8w8?si=e67a11f4ca514c06" class="link-yellow" target="_blank" rel="noopener">spotify link</a>
-    </div>
-  </li>
+  Tap <button id="play-btn" style="background:none;border:none;color:#FFD600;cursor:pointer;font-family:inherit;font-size:inherit;padding:0;text-decoration:underline;">here</button> to listen<br>
+  my favourite song
+  <div style="margin-left: 13ch;">
+    <span style="font-size:1.5rem;">&#8595;</span>
+    <a href="https://open.spotify.com/track/3kGsA9UQtSkSszY3epp8w8?si=e67a11f4ca514c06" class="link-yellow" target="_blank" rel="noopener">spotify link</a>
+  </div>
+</li>
+
 
 </ul>
 
@@ -109,15 +110,13 @@
     </ul>
   </div>
   <script>
-    // Play the background music after any user interaction (click/tap)
-    function startMusic() {
-      var audio = document.getElementById('bg-music');
-      audio.play();
-      document.body.removeEventListener('click', startMusic);
-      document.body.removeEventListener('touchstart', startMusic);
-    }
-    document.body.addEventListener('click', startMusic);
-    document.body.addEventListener('touchstart', startMusic);
-  </script>
+  document.getElementById('play-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    var audio = document.getElementById('bg-music');
+    audio.play();
+  });
+</script>
+
 </body>
 </html>
+
