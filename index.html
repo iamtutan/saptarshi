@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>saptarshi</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: monospace, monospace;
+    }
+    .container {
+      position: absolute;
+      left: 30%;
+      top: 50%;
+      transform: translateY(-70%);
+      text-align: left;
+      width: auto;
+      padding-left: 32px;
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    h1 img {
+      width: 38px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-left: 8px;
+    }
+    ul {
+      padding-left: 35px;
+      margin-left: 20px;
+    }
+    ul ul {
+      padding-left: 35px;
+      margin-left: 20px;
+    }
+    ul > li > ul {
+      margin-top: 14px;
+    }
+    ul ul > li {
+      margin-bottom: 14px;
+    }
+    ul ul > li:last-child {
+      margin-bottom: 0;
+    }
+    a.link-yellow {
+      color: #FFD600;
+      text-decoration: underline;
+      text-decoration-color: #FFD600;
+    }
+    ::selection {
+      background: #FDD33C;
+      color: #101010;
+      -webkit-text-fill-color: #101010;
+    }
+  </style>
+</head>
+<body>
+  <!-- Audio will play after first user click -->
+  <audio id="bg-music" src="mysong.mp3" loop></audio>
+  <div class="container">
+    <h1>
+      saptarshi
+      <img src="icon.png" alt="icon" />
+    </h1>
+    <ul>
+      <li>Me
+        <ul>
+  <li>18 year old chill guy</li>
+  <li>
+    <a href="https://github.com/iamtutan" class="link-yellow" target="_blank" rel="noopener">github</a>
+  </li>
+  <li>
+    <a href="https://letterboxd.com/philocine_" class="link-yellow" target="_blank" rel="noopener">Letterboxd</a>
+  </li>
+  <li>
+    <a href="https://open.spotify.com/user/31gcihvlfrujb6citewmzd7h7igq?si=8fb38862fb804587" class="link-yellow" target="_blank" rel="noopener">spotify</a>
+  </li>
+  <li>
+    social:
+    <a href="https://x.com/Saptarshib99209" class="link-yellow" target="_blank" rel="noopener">X</a>,
+    <a href="https://instagram.com/sap_7x" class="link-yellow" target="_blank" rel="noopener">insta</a>
+  </li>
+
+  <li>
+    Tap anywhere on the site to<br>
+     listen my favorite song
+    <div style="margin-left: 20ch;">
+      <span style="font-size:1.5rem;">&#8595;</span>
+      <a href="https://open.spotify.com/track/3kGsA9UQtSkSszY3epp8w8?si=e67a11f4ca514c06" class="link-yellow" target="_blank" rel="noopener">spotify link</a>
+    </div>
+  </li>
+
+</ul>
+
+      </li>
+    </ul>
+  </div>
+  <script>
+    // Play the background music after any user interaction (click/tap)
+    function startMusic() {
+      var audio = document.getElementById('bg-music');
+      audio.play();
+      document.body.removeEventListener('click', startMusic);
+      document.body.removeEventListener('touchstart', startMusic);
+    }
+    document.body.addEventListener('click', startMusic);
+    document.body.addEventListener('touchstart', startMusic);
+  </script>
+</body>
+</html>
